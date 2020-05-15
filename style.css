@@ -75,14 +75,13 @@ h1 {
 .tribute-info-inner p {
   line-height: 1.5;
   letter-spacing: .5px;
+  background-color: rgba(0,0,0, 0.3);
 }
 
 h2 {
   font-family: Chalkduster;
   background-color: rgba(0,0,0, 0.4);
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  padding: 20px 0;
 }
 
 nav {
@@ -92,8 +91,7 @@ nav {
   color: white;
   font-family: Chalkduster;
   font-size: 2vw;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.4);
+  background-color: rgba(0,0,0, 0.6);
   position: sticky;
   top: 0;
   display: flex;
@@ -205,6 +203,11 @@ blockquote {
   font-family: Chalkduster;
 }
 
-#top {
+.go-top {
   padding-bottom: 10px;
+}
+
+.is-margin {
+ margin-top: 100px;
+ display: block;
 }
