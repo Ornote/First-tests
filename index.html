@@ -8,11 +8,27 @@
   <meta name="keywords" content="HTML, CSS, FCC">
   <meta name="author" content="Nadia Chaabani">
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready( function () {
+      $('.go-top').click(function () {
+        $('html').animate({
+          scrollTop: 0
+        }, 800); 
+    }); 
+      $('a[href^="#"]').click(function(){  
+        var id = $(this).attr("href");
+        var offset = $(id).offset().top 
+          $('html, body').animate({scrollTop: offset}, 'slow'); 
+          return false;  
+    });
+}) 
+  </script>
 </head>
 
 <body>
 
-  <main id="main">
+  <main id="main" class="is-main">
     <div class="bg-image"></div>
 
     <h1 id="title">The crazy bet of 7 <abbr title="Non Governmental Organisation">NGOs</abbr> to <strong><span>REWILD</span></strong> the world...</h1>
@@ -32,7 +48,7 @@
     <session id="tribute-info">
 
       <div class="tribute-info-inner">
-        <h2 id="first">What is REWILD ?</h2>
+        <h2 id="first" class="active">What is REWILD ?</h2>
         <p>REWILD is an organization created by 7 founding associations specializing in the defense, safeguard, seizure, care and rehabilitation of wild animals victims of trade as well as in the conservation and protection of wild animals and their natural habitats.</p>
 
         <h2 id="second">What are their actions ?</h2>
@@ -80,7 +96,7 @@
         <cite>-- Paul Waston --</cite>
     </blockquote>
 
-      <a href="#" id="top">Back to top</a>
+      <a href="#" class="go-top">Back to top</a>
     </footer>
 
   </main>
